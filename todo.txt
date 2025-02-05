@@ -1,0 +1,1 @@
+-currently we convert all sentences to embedding and compare. for unigram and bigrams in the input, we may cut ngrams in the db then compare.

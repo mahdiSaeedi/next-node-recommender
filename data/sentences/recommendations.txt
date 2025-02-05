@@ -1,0 +1,48 @@
+input: ParallelGateway. ExclusiveGateway: complete time, Task: hand application examine board
+
+ground truth: check bachelor sufficient
+
+ParallelGateway. ExclusiveGateway: complete time, Task: hand application examine board
+1.0
+check bachelor equivalent unus potsdam
+
+ParallelGateway. ExclusiveGateway: complete time, Task: hand application examine board
+1.0
+receive application
+
+Task: check application complete, ParallelGateway. ExclusiveGateway: complete time
+0.84
+hand application examine board
+
+Task: check application complete, ParallelGateway. ExclusiveGateway: complete time
+0.84
+hand application examine board
+
+Task: check application time, ParallelGateway. ExclusiveGateway: complete time
+0.83
+hand application examine board
+
+Task: check application time, ParallelGateway. ExclusiveGateway: complete time
+0.83
+hand application examine board
+
+ExclusiveGateway: time, Task: check application complete, ExclusiveGateway.
+0.78
+send application selection committee
+
+Task: hand application examine board, Task: receive application, ParallelGateway.
+0.72
+score motivation
+
+Task: hand application examine board, Task: receive application, ParallelGateway.
+0.72
+score bachelor grade
+
+Task: hand application examine board, Task: receive application, ParallelGateway.
+0.72
+score qualification
+
+HIT : 0
+
+-------------------------------
+=========================================================================

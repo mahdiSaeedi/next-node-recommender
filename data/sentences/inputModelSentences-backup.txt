@@ -1,0 +1,50 @@
+StartEvent. ParallelGateway. [NN] task:check application time:FU_berlin
+---
+StartEvent. ParallelGateway. [NN] task:check application complete:FU_berlin
+---
+Task: check application time, ParallelGateway. ExclusiveGateway: complete time [next node label] hand application examine board
+Task: check application complete, ParallelGateway. ExclusiveGateway: complete time [next node label] hand application examine board
+---
+ParallelGateway. ExclusiveGateway: complete time, Task: hand application examine board [next node label] check bachelor sufficient
+---
+ParallelGateway. ExclusiveGateway: complete time, ExclusiveGateway. [next node label] send rejection
+Task: rank applicant, ExclusiveGateway: rank sufficient, ExclusiveGateway. [next node label] send rejection
+Task: check bachelor sufficient, ExclusiveGateway. ExclusiveGateway. [next node label] send rejection
+---
+Task: hand application examine board, Task: check bachelor sufficient, ExclusiveGateway. [next node label] set additional requirement
+---
+Task: rank applicant, ExclusiveGateway: rank sufficient, ExclusiveGateway. [next node label] send acceptance
+Task: check bachelor grade within top, ExclusiveGateway. ExclusiveGateway. [next node label] send acceptance
+---
+Task: check bachelor sufficient, ExclusiveGateway. ExclusiveGateway. [next node label] check bachelor grade within top
+ExclusiveGateway. Task: set additional requirement, ExclusiveGateway. [next node label] check bachelor grade within top
+---
+ExclusiveGateway. Task: check bachelor grade within top, ExclusiveGateway. [next node label] invite talk
+---
+Task: check bachelor grade within top, ExclusiveGateway. Task: invite talk [next node label] talk applicant
+---
+ExclusiveGateway. Task: invite talk, Task: talk applicant [next node label] document
+---
+Task: invite talk, Task: talk applicant, Task: document [next node label] rank applicant
+---
+ParallelGateway. Task: fill application form, ParallelGateway. [next node label] send application
+ParallelGateway. Task: add certificate bachelor degree, ParallelGateway. [next node label] send application
+ExclusiveGateway: german, ExclusiveGateway. ParallelGateway. [next node label] send application
+Task: add certificate german language, ExclusiveGateway. ParallelGateway. [next node label] send application
+---
+Task: complete application, ParallelGateway. ExclusiveGateway: german [next node label] add certificate german language
+---
+Task: send application, ExclusiveGateway. IntermediateCatchEvent. [next node label] take interview
+---
+Task: send application, ExclusiveGateway. ExclusiveGateway. [next node label] receive rejection
+Task: take interview, ExclusiveGateway. ExclusiveGateway. [next node label] receive rejection
+---
+Task: send application, ExclusiveGateway. ExclusiveGateway. [next node label] receive acceptance
+Task: take interview, ExclusiveGateway. ExclusiveGateway. [next node label] receive acceptance
+---
+StartEvent. Task: complete application, ParallelGateway. [next node label] fill application form
+---
+StartEvent. Task: complete application, ParallelGateway. [next node label] add certificate bachelor degree
+---
+ExclusiveGateway. ExclusiveGateway. Task: receive acceptance [next node label] immatricu late
+ExclusiveGateway. ExclusiveGateway. Task: receive acceptance [next node label] immatricu late

@@ -1,0 +1,7 @@
+Notes:
+-dataset.txt contains n-gram representation of all BPMN models in your dataset, as a single list. We use SAMOS tool to extract n-grams from BPMN models.
+-inputModelFeatures.txt contains groups of n-grams that lead to the same task node, in the input BPMN model. [NN] tag shows what task name follows each n-gram.
+-datasetSentences.txt contains same but simplified representation of the n-grams from dataset.txt.
+-inputModelSentences.txt contains same but simplified representation of the n-grams from inputModelFeatures.txt.
+-recommendations.txt contains the top-k recommendation results for each case from inputModelSentences.txt. 'Hit' parameter shows whether or not the ground-truth (expected label) is among the recommendations.
+-In the current setting, the labels are preprocessed (e.g., stop words are removed). If needed, original labels can be preserved without any change.
